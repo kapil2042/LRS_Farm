@@ -50,7 +50,7 @@ def forgotpass(request):
             aau=encpass.decode()
             lrs=key.decode()
             time1=int(time() * 1000)
-            a='Reset Password link -> 127.0.0.1:8000/chklink?unm='+username+'&lrs='+lrs+'&aau='+aau+'&time='+time1
+            a='Reset Password link -> 127.0.0.1:8000/chklink?unm='+username+'&lrs='+lrs+'&aau='+aau+'&time='+str(time1)
             send_mail(
                 'Reset Password - LRS_AAU',
                 a,
@@ -75,7 +75,7 @@ def chklink(request):
         timenow=int(time() * 1000)
         fernet = Fernet(key.encode())
         decemail = fernet.decrypt(email.encode()).decode()
-        if timeurl in range((timenow-3600000),timenow,1):
+        if int(timeurl) in range((timenow-3600000),timenow,1):
             try:
                 username = get_user_model().objects.get(email=decemail.lower()).username
                 print(username)
