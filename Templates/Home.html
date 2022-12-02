@@ -1,0 +1,100 @@
+{% include "header.html" %}
+
+<div
+    class="justify-between items-center w-full mt-1 mb-10 bg-cyan-600 min-h-[50px] rounded-2xl p-3.5 text-center text-4xl font-semibold text-white shadow-lg">
+    Live Stock Research Station
+</div>
+
+
+
+
+<div id="default-carousel" class="relative" data-carousel="slide">
+    <!-- Carousel wrapper -->
+    <div class="relative h-56 overflow-hidden rounded-lg md:h-[700px]">
+        <!-- Item 1 -->
+        <div class="duration-700 ease-in-out absolute inset-0 transition-all transform translate-x-0 z-20"
+            data-carousel-item="">
+            <span
+                class="absolute text-2xl font-semibold text-white -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 sm:text-3xl dark:text-gray-800">First
+                Slide</span>
+            <img src="/static/images/lrshome1.jpg"
+                class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+        </div>
+        <!-- Item 2 -->
+        <div class="duration-700 ease-in-out absolute inset-0 transition-all transform translate-x-full z-10"
+            data-carousel-item="">
+            <img src="/static/images/lrshome2.jpg"
+                class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+        </div>
+        <!-- Item 3 -->
+        <div class="duration-700 ease-in-out absolute inset-0 transition-all transform -translate-x-full z-10"
+            data-carousel-item="">
+            <img src="/static/images/lrshome3.jpg"
+                class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+        </div>
+    </div>
+    <!-- Slider indicators -->
+    <div class="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2">
+        <button type="button" class="w-3 h-3 rounded-full bg-white dark:bg-gray-800" aria-current="true"
+            aria-label="Slide 1" data-carousel-slide-to="0"></button>
+        <button type="button"
+            class="w-3 h-3 rounded-full bg-white/50 dark:bg-gray-800/50 hover:bg-white dark:hover:bg-gray-800"
+            aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+        <button type="button"
+            class="w-3 h-3 rounded-full bg-white/50 dark:bg-gray-800/50 hover:bg-white dark:hover:bg-gray-800"
+            aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+    </div>
+    <!-- Slider controls -->
+    <button type="button"
+        class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+        data-carousel-prev="">
+        <span
+            class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg aria-hidden="true" class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none"
+                stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+            </svg>
+            <span class="sr-only">Previous</span>
+        </span>
+    </button>
+    <button type="button"
+        class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+        data-carousel-next="">
+        <span
+            class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg aria-hidden="true" class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none"
+                stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+            <span class="sr-only">Next</span>
+        </span>
+    </button>
+</div>
+
+
+<div class="h-auto w-full mt-5">
+    <p class="text-justify">Established in 1979, this station is entrusted the responsibility of establishing a
+        crossbred dairy herd
+        which can thrive and produce good amount of milk in middle Gujarat Agro-climatic zone. Research has been
+        taken up to study various aspects of management, reproduction, nutrition, adaptation and economics of milk
+        production.</p><br>
+    <p class="text-justify">The farm started with two crosses viz. Jersey x Kankrej and Holstein Friesian x Kankrej.
+        In 1984, HF x K
+        crosses were removed from the herd and only J x K crosses were maintained. In 1991, looking to the
+        performance of inter-se of J x K crosses, blood of HF animals was introduced in the animals building a cow
+        with 25 % HF x 25 % J x 50 % K, the Triple bred. In 2006, the breeding policy of the farm was again revised
+        and research was started on HF x K crosses. At present, the farm has HF x K crosses. Another scheme,
+        entitled “Introduction of mechanization on a dairy farm” is going at the research Station to take care of
+        the paucity of skilled labour since February 2011. Under this project introduce CCTV monitoring systems,
+        installation of bulk milk cooler and automatic pipeline milking machine has been completed. In future,
+        mechanization in feeding through Total Mixed Ration machine (TMR) and machine cleaning of floors will be
+        taken up.</p><br>
+    <p class="text-justify">Third scheme “Conservation and improvement of indigenous cattle at Anand” was sanctioned
+        in March, 2016 only.
+        The major objective of the scheme is to work on A1 / A2 milk protein in indigenous and crossbred cattle of
+        Gujarat. In addition studies on innet immunity in cattle will also be taken up</p>
+</div>
+
+
+
+{% include "footer.html" %}

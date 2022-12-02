@@ -1,0 +1,76 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="{% static 'css/Styles.css' %}">
+    <link rel="icon" type="image/x-icon" href="{% static 'images/logo.ico' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>LRS_AAU</title>
+</head>
+
+<body class="bg-gray-100 dark:bg-gray-800 text-black dark:text-white w-full">
+    <div id="preloderopti">
+
+    </div> 
+    <script>
+        var loder = document.getElementById('preloderopti');
+
+        window.addEventListener("load",function () {
+            loder.style.display = 'none';
+        })
+    </script>
+    <div class="max-w-screen-2xl m-auto mt-5 md:mt-20 md:flex">
+        <table class="text-sm text-left text-gray-500 dark:text-gray-400 shadow-md">
+            <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                <tr>
+                    <th scope="col" class="py-3 px-3">
+                        #
+                    </th>
+                    <th scope="col" class="py-3 px-3">
+                        INGREDIENTS
+                    </th>
+                    <th scope="col" class="py-3 px-3">
+                        PREDICTED QUANTITY
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for i,j in qty.items %}
+                <tr class="bg-white border-b dark:bg-gray-900 dark:border-gray-700 hover:bg-gray-50 
+							dark:hover:bg-gray-800">
+                    <th scope="row" class="py-4 px-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                        {{forloop.counter}}
+                    </th>
+                    <td class="py-4 px-3">
+                        {{j.ing}}
+                    </td>
+                    <td class="py-4 px-3 text-center">
+                        {{j.p_qty}}
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <div class="m-5 md:ml-16">
+            <p class="text-2xl md:text-5xl text-green-500 font-bold">Cost Optimization Done!</p>
+            <p class="text-sm md:text-lg mt-2 md:mt-5 text-right">For {{feed_name}} Feed</p>
+            <p class="text-lg md:text-2xl pt-5">You can download the Excel File here</p>
+            <div class="text-end">
+                <form action="../export_xls/">
+                    <button type="submit" class="bg-green-500 px-5 py-2 my-3 rounded-lg">Download</button>
+                </form>
+            </div>
+            <div class="md:grid md:justify-items-end md:pt-20 pt-2">
+                <p class="text-lg md:text-xl">Back to home page</p>
+                <a href="{% url 'home' %}" class="hover:underline hover:underline-offset-4 text-blue-500 font-semibold">Click here</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

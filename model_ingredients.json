@@ -1,0 +1,685 @@
+[{
+  "_id": {
+    "$oid": "6319c92cf723673695f33cc2"
+  },
+  "id": 1,
+  "name": "MAIZE",
+  "protein": 9,
+  "energy": 3340,
+  "lysine": 0.24,
+  "methionine": 0.18,
+  "e_extract": 3.5,
+  "c_fiber": 2.2,
+  "calcium": 0.03,
+  "phosphorus": 0.3,
+  "a_phosphorus": 0.1,
+  "pythic_phosphorus": 0.2,
+  "salt": 0.05,
+  "rate": 16
+},{
+  "_id": {
+    "$oid": "6319c92cf723673695f33cc3"
+  },
+  "id": 2,
+  "name": "JOWAR",
+  "protein": 13,
+  "energy": 2000,
+  "lysine": 0.2,
+  "methionine": 0.1,
+  "e_extract": 0.2,
+  "c_fiber": 30,
+  "calcium": 2.27,
+  "phosphorus": 0.7,
+  "a_phosphorus": 0,
+  "pythic_phosphorus": 0.7,
+  "salt": 0,
+  "rate": 14
+},{
+  "_id": {
+    "$oid": "6319c92cf723673695f33cc4"
+  },
+  "id": 3,
+  "name": "BAJARA",
+  "protein": 12,
+  "energy": 2640,
+  "lysine": 0.42,
+  "methionine": 0.24,
+  "e_extract": 4,
+  "c_fiber": 3,
+  "calcium": 0.04,
+  "phosphorus": 0.7,
+  "a_phosphorus": 0,
+  "pythic_phosphorus": 0.7,
+  "salt": 0.07,
+  "rate": 13
+},{
+  "_id": {
+    "$oid": "6319c92cf723673695f33cc5"
+  },
+  "id": 4,
+  "name": "WHEAT",
+  "protein": 12,
+  "energy": 3000,
+  "lysine": 0.4,
+  "methionine": 0.17,
+  "e_extract": 2.6,
+  "c_fiber": 2.5,
+  "calcium": 0.05,
+  "phosphorus": 0.43,
+  "a_phosphorus": 0.17,
+  "pythic_phosphorus": 0.26,
+  "salt": 0.07,
+  "rate": 22
+},{
+  "_id": {
+    "$oid": "6319c92cf723673695f33cc6"
+  },
+  "id": 5,
+  "name": "BARLEY",
+  "protein": 11.5,
+  "energy": 2640,
+  "lysine": 0.27,
+  "methionine": 0.14,
+  "e_extract": 1.8,
+  "c_fiber": 6.5,
+  "calcium": 0.03,
+  "phosphorus": 0.36,
+  "a_phosphorus": 0.16,
+  "pythic_phosphorus": 0.2,
+  "salt": 0,
+  "rate": 0
+},{
+  "_id": {
+    "$oid": "6319c92cf723673695f33cc7"
+  },
+  "id": 6,
+  "name": "RAGI",
+  "protein": 7,
+  "energy": 2800,
+  "lysine": 0.22,
+  "methionine": 0.18,
+  "e_extract": 4,
+  "c_fiber": 3,
+  "calcium": 0.18,
+  "phosphorus": 0.1,
+  "a_phosphorus": 0.03,
+  "pythic_phosphorus": 0.07,
+  "salt": 0.04,
+  "rate": 0
+},{
+  "_id": {
+    "$oid": "6319c92cf723673695f33cc8"
+  },
+  "id": 7,
+  "name": "RICE BROKEN",
+  "protein": 8,
+  "energy": 2500,
+  "lysine": 0.2,
+  "methionine": 0.1,
+  "e_extract": 1.7,
+  "c_fiber": 1.15,
+  "calcium": 0.11,
+  "phosphorus": 0.12,
+  "a_phosphorus": 0.01,
+  "pythic_phosphorus": 0.11,
+  "salt": 0.07,
+  "rate": 12
+},{
+  "_id": {
+    "$oid": "6319c92cf723673695f33cc9"
+  },
+  "id": 8,
+  "name": "RICE POLISH",
+  "protein": 11,
+  "energy": 2900,
+  "lysine": 0.54,
+  "methionine": 0.25,
+  "e_extract": 14,
+  "c_fiber": 12,
+  "calcium": 0.04,
+  "phosphorus": 1.37,
+  "a_phosphorus": 0.14,
+  "pythic_phosphorus": 1.23,
+  "salt": 0.07,
+  "rate": 15
+},{
+  "_id": {
+    "$oid": "6319c92cf723673695f33cca"
+  },
+  "id": 9,
+  "name": "D.O.R.B",
+  "protein": 13,
+  "energy": 1450,
+  "lysine": 0.64,
+  "methionine": 0.3,
+  "e_extract": 1,
+  "c_fiber": 14,
+  "calcium": 0.37,
+  "phosphorus": 1.5,
+  "a_phosphorus": 0.21,
+  "pythic_phosphorus": 1.29,
+  "salt": 0.07,
+  "rate": 13
+},{
+  "_id": {
+    "$oid": "6319c92cf723673695f33ccb"
+  },
+  "id": 10,
+  "name": "TAPIOCA CHIPS",
+  "protein": 2,
+  "energy": 2900,
+  "lysine": 0,
+  "methionine": 0,
+  "e_extract": 0.3,
+  "c_fiber": 9,
+  "calcium": 0.2,
+  "phosphorus": 0.1,
+  "a_phosphorus": 0.03,
+  "pythic_phosphorus": 0.07,
+  "salt": 0,
+  "rate": 0
+},{
+  "_id": {
+    "$oid": "6319c92cf723673695f33ccc"
+  },
+  "id": 11,
+  "name": "MOLASSES",
+  "protein": 2,
+  "energy": 2400,
+  "lysine": 0,
+  "methionine": 0,
+  "e_extract": 0,
+  "c_fiber": 0,
+  "calcium": 1.51,
+  "phosphorus": 0.08,
+  "a_phosphorus": 0.04,
+  "pythic_phosphorus": 0.04,
+  "salt": 1,
+  "rate": 9
+},{
+  "_id": {
+    "$oid": "6319c92cf723673695f33ccd"
+  },
+  "id": 12,
+  "name": "G.N.C.EXP",
+  "protein": 40,
+  "energy": 2600,
+  "lysine": 1.5,
+  "methionine": 0.41,
+  "e_extract": 7,
+  "c_fiber": 9,
+  "calcium": 0.23,
+  "phosphorus": 0.55,
+  "a_phosphorus": 0.2,
+  "pythic_phosphorus": 0.35,
+  "salt": 0.03,
+  "rate": 35
+},{
+  "_id": {
+    "$oid": "6319c92cf723673695f33cce"
+  },
+  "id": 13,
+  "name": "G.N.EXTR",
+  "protein": 41,
+  "energy": 2400,
+  "lysine": 1.6,
+  "methionine": 0.42,
+  "e_extract": 1,
+  "c_fiber": 11,
+  "calcium": 0.31,
+  "phosphorus": 0.67,
+  "a_phosphorus": 0.2,
+  "pythic_phosphorus": 0.47,
+  "salt": 0.07,
+  "rate": 33
+},{
+  "_id": {
+    "$oid": "6319c92cf723673695f33ccf"
+  },
+  "id": 14,
+  "name": "SOYABEAN MEAL",
+  "protein": 45,
+  "energy": 2300,
+  "lysine": 2.9,
+  "methionine": 0.64,
+  "e_extract": 1,
+  "c_fiber": 7,
+  "calcium": 0.36,
+  "phosphorus": 0.67,
+  "a_phosphorus": 0.29,
+  "pythic_phosphorus": 0.38,
+  "salt": 0.07,
+  "rate": 38
+},{
+  "_id": {
+    "$oid": "6319c92cf723673695f33cd0"
+  },
+  "id": 15,
+  "name": "MAIZE GLUTEN",
+  "protein": 60,
+  "energy": 3100,
+  "lysine": 0.8,
+  "methionine": 1,
+  "e_extract": 2.01,
+  "c_fiber": 5,
+  "calcium": 0.22,
+  "phosphorus": 0.4,
+  "a_phosphorus": 0.13,
+  "pythic_phosphorus": 0.27,
+  "salt": 0,
+  "rate": 52
+},{
+  "_id": {
+    "$oid": "6319c92cf723673695f33cd1"
+  },
+  "id": 16,
+  "name": "SESAME MEAL",
+  "protein": 38,
+  "energy": 1900,
+  "lysine": 1,
+  "methionine": 0.84,
+  "e_extract": 8,
+  "c_fiber": 5,
+  "calcium": 2.4,
+  "phosphorus": 1.4,
+  "a_phosphorus": 0.25,
+  "pythic_phosphorus": 1.15,
+  "salt": 0.03,
+  "rate": 0
+},{
+  "_id": {
+    "$oid": "6319c92cf723673695f33cd2"
+  },
+  "id": 17,
+  "name": "SUNFLOWER MEAL",
+  "protein": 30,
+  "energy": 1600,
+  "lysine": 1.09,
+  "methionine": 0.69,
+  "e_extract": 1,
+  "c_fiber": 27,
+  "calcium": 0.37,
+  "phosphorus": 0.9,
+  "a_phosphorus": 0.3,
+  "pythic_phosphorus": 0.6,
+  "salt": 0.03,
+  "rate": 20
+},{
+  "_id": {
+    "$oid": "6319c92cf723673695f33cd3"
+  },
+  "id": 18,
+  "name": "RAPESEED MEAL",
+  "protein": 37,
+  "energy": 1900,
+  "lysine": 0.6,
+  "methionine": 0.38,
+  "e_extract": 3,
+  "c_fiber": 7,
+  "calcium": 0.72,
+  "phosphorus": 1.1,
+  "a_phosphorus": 0.25,
+  "pythic_phosphorus": 0.85,
+  "salt": 0.3,
+  "rate": 20
+},{
+  "_id": {
+    "$oid": "6319c92cf723673695f33cd4"
+  },
+  "id": 19,
+  "name": "SUNFLOWER SEED",
+  "protein": 20,
+  "energy": 3200,
+  "lysine": 0.71,
+  "methionine": 0.46,
+  "e_extract": 40,
+  "c_fiber": 22.7,
+  "calcium": 0.17,
+  "phosphorus": 0.67,
+  "a_phosphorus": 0.16,
+  "pythic_phosphorus": 0.51,
+  "salt": 0,
+  "rate": 0
+},{
+  "_id": {
+    "$oid": "6319c92cf723673695f33cd5"
+  },
+  "id": 20,
+  "name": "JAWLA",
+  "protein": 48,
+  "energy": 2600,
+  "lysine": 3.5,
+  "methionine": 1.5,
+  "e_extract": 7,
+  "c_fiber": 1,
+  "calcium": 5.5,
+  "phosphorus": 2.5,
+  "a_phosphorus": 2.5,
+  "pythic_phosphorus": 0,
+  "salt": 5,
+  "rate": 38
+},{
+  "_id": {
+    "$oid": "6319c92cf723673695f33cd6"
+  },
+  "id": 21,
+  "name": "WHOLE FISH",
+  "protein": 50,
+  "energy": 2200,
+  "lysine": 3.19,
+  "methionine": 1.2,
+  "e_extract": 5,
+  "c_fiber": 2,
+  "calcium": 5.5,
+  "phosphorus": 2.5,
+  "a_phosphorus": 2.5,
+  "pythic_phosphorus": 0,
+  "salt": 5,
+  "rate": 35
+},{
+  "_id": {
+    "$oid": "6319c92cf723673695f33cd7"
+  },
+  "id": 22,
+  "name": "FISH MEAL",
+  "protein": 42,
+  "energy": 1900,
+  "lysine": 3.1,
+  "methionine": 1.19,
+  "e_extract": 5,
+  "c_fiber": 3,
+  "calcium": 7,
+  "phosphorus": 1.7,
+  "a_phosphorus": 1.7,
+  "pythic_phosphorus": 0,
+  "salt": 6,
+  "rate": 36
+},{
+  "_id": {
+    "$oid": "6319c92cf723673695f33cd8"
+  },
+  "id": 23,
+  "name": "BLOOD MEAL",
+  "protein": 85,
+  "energy": 2640,
+  "lysine": 7,
+  "methionine": 1,
+  "e_extract": 1,
+  "c_fiber": 1,
+  "calcium": 0.28,
+  "phosphorus": 0.05,
+  "a_phosphorus": 0.05,
+  "pythic_phosphorus": 0,
+  "salt": 0,
+  "rate": 50
+},{
+  "_id": {
+    "$oid": "6319c92cf723673695f33cd9"
+  },
+  "id": 24,
+  "name": "BONE & MEAT MEAL",
+  "protein": 50,
+  "energy": 2400,
+  "lysine": 2.7,
+  "methionine": 0.67,
+  "e_extract": 10,
+  "c_fiber": 2.8,
+  "calcium": 8.1,
+  "phosphorus": 4.1,
+  "a_phosphorus": 4.1,
+  "pythic_phosphorus": 0,
+  "salt": 0,
+  "rate": 40
+},{
+  "_id": {
+    "$oid": "6319c92cf723673695f33cda"
+  },
+  "id": 25,
+  "name": "LIVER MEAL",
+  "protein": 60,
+  "energy": 2800,
+  "lysine": 4.5,
+  "methionine": 1.2,
+  "e_extract": 5,
+  "c_fiber": 2.5,
+  "calcium": 0.5,
+  "phosphorus": 1,
+  "a_phosphorus": 1,
+  "pythic_phosphorus": 0,
+  "salt": 0.2,
+  "rate": 0
+},{
+  "_id": {
+    "$oid": "6319c92cf723673695f33cdb"
+  },
+  "id": 26,
+  "name": "ANI-PRO",
+  "protein": 60,
+  "energy": 2400,
+  "lysine": 1.5,
+  "methionine": 0.75,
+  "e_extract": 4,
+  "c_fiber": 1.6,
+  "calcium": 3,
+  "phosphorus": 1,
+  "a_phosphorus": 1,
+  "pythic_phosphorus": 0,
+  "salt": 0,
+  "rate": 0
+},{
+  "_id": {
+    "$oid": "6319c92cf723673695f33cdc"
+  },
+  "id": 27,
+  "name": "TALLOW",
+  "protein": 0,
+  "energy": 8800,
+  "lysine": 0,
+  "methionine": 0,
+  "e_extract": 100,
+  "c_fiber": 0,
+  "calcium": 0,
+  "phosphorus": 0,
+  "a_phosphorus": 0,
+  "pythic_phosphorus": 0,
+  "salt": 0,
+  "rate": 80
+},{
+  "_id": {
+    "$oid": "6319c92cf723673695f33cdd"
+  },
+  "id": 28,
+  "name": "VEG  OIL",
+  "protein": 0,
+  "energy": 9500,
+  "lysine": 0,
+  "methionine": 0,
+  "e_extract": 100,
+  "c_fiber": 0,
+  "calcium": 0,
+  "phosphorus": 0,
+  "a_phosphorus": 0,
+  "pythic_phosphorus": 0,
+  "salt": 0,
+  "rate": 100
+},{
+  "_id": {
+    "$oid": "6319c92cf723673695f33cde"
+  },
+  "id": 29,
+  "name": "MINERAL MIXTURE",
+  "protein": 0,
+  "energy": 0,
+  "lysine": 0,
+  "methionine": 0,
+  "e_extract": 0,
+  "c_fiber": 0,
+  "calcium": 32,
+  "phosphorus": 6,
+  "a_phosphorus": 6,
+  "pythic_phosphorus": 0,
+  "salt": 0,
+  "rate": 150
+},{
+  "_id": {
+    "$oid": "6319c92cf723673695f33cdf"
+  },
+  "id": 30,
+  "name": "O. SHELL GRIT ",
+  "protein": 0,
+  "energy": 0,
+  "lysine": 0,
+  "methionine": 0,
+  "e_extract": 0,
+  "c_fiber": 0,
+  "calcium": 35,
+  "phosphorus": 0,
+  "a_phosphorus": 0,
+  "pythic_phosphorus": 0,
+  "salt": 0,
+  "rate": 6
+},{
+  "_id": {
+    "$oid": "6319c92cf723673695f33ce0"
+  },
+  "id": 31,
+  "name": "L. S. P.",
+  "protein": 0,
+  "energy": 0,
+  "lysine": 0,
+  "methionine": 0,
+  "e_extract": 0,
+  "c_fiber": 0,
+  "calcium": 33,
+  "phosphorus": 0,
+  "a_phosphorus": 0,
+  "pythic_phosphorus": 0,
+  "salt": 0,
+  "rate": 5
+},{
+  "_id": {
+    "$oid": "6319c92cf723673695f33ce1"
+  },
+  "id": 32,
+  "name": "D. C. P.",
+  "protein": 0,
+  "energy": 0,
+  "lysine": 0,
+  "methionine": 0,
+  "e_extract": 0,
+  "c_fiber": 0,
+  "calcium": 23,
+  "phosphorus": 17,
+  "a_phosphorus": 17,
+  "pythic_phosphorus": 0,
+  "salt": 0,
+  "rate": 28
+},{
+  "_id": {
+    "$oid": "6319c92cf723673695f33ce2"
+  },
+  "id": 33,
+  "name": "BONE MEAL",
+  "protein": 0,
+  "energy": 0,
+  "lysine": 0,
+  "methionine": 0,
+  "e_extract": 0,
+  "c_fiber": 0,
+  "calcium": 29.8,
+  "phosphorus": 12.5,
+  "a_phosphorus": 12.5,
+  "pythic_phosphorus": 0,
+  "salt": 0,
+  "rate": 25
+},{
+  "_id": {
+    "$oid": "6319c92cf723673695f33ce3"
+  },
+  "id": 34,
+  "name": "FULL FAT SOYA",
+  "protein": 37,
+  "energy": 3800,
+  "lysine": 2.4,
+  "methionine": 0.5,
+  "e_extract": 18,
+  "c_fiber": 4,
+  "calcium": 0.15,
+  "phosphorus": 0.69,
+  "a_phosphorus": 0.2,
+  "pythic_phosphorus": 0.49,
+  "salt": 0,
+  "rate": 40
+},{
+  "_id": {
+    "$oid": "6319c92cf723673695f33ce4"
+  },
+  "id": 35,
+  "name": "LIYSINE",
+  "protein": 78,
+  "energy": 3900,
+  "lysine": 98,
+  "methionine": 0,
+  "e_extract": 0,
+  "c_fiber": 0,
+  "calcium": 0,
+  "phosphorus": 0,
+  "a_phosphorus": 0,
+  "pythic_phosphorus": 0,
+  "salt": 0,
+  "rate": 325
+},{
+  "_id": {
+    "$oid": "6319c92cf723673695f33ce5"
+  },
+  "id": 36,
+  "name": "METHIONINE",
+  "protein": 95,
+  "energy": 4500,
+  "lysine": 0,
+  "methionine": 98,
+  "e_extract": 0,
+  "c_fiber": 0,
+  "calcium": 0,
+  "phosphorus": 0,
+  "a_phosphorus": 0,
+  "pythic_phosphorus": 0,
+  "salt": 0,
+  "rate": 225
+},{
+  "_id": {
+    "$oid": "6319c92cf723673695f33ce6"
+  },
+  "id": 37,
+  "name": "SALT",
+  "protein": 0,
+  "energy": 0,
+  "lysine": 0,
+  "methionine": 0,
+  "e_extract": 0,
+  "c_fiber": 0,
+  "calcium": 0,
+  "phosphorus": 0,
+  "a_phosphorus": 0,
+  "pythic_phosphorus": 0,
+  "salt": 95,
+  "rate": 5
+},{
+  "_id": {
+    "$oid": "6319c92cf723673695f33ce7"
+  },
+  "id": 38,
+  "name": "NATUPHOS",
+  "protein": 2250,
+  "energy": 530000,
+  "lysine": 120,
+  "methionine": 10,
+  "e_extract": 0,
+  "c_fiber": 0,
+  "calcium": 1000,
+  "phosphorus": 1916,
+  "a_phosphorus": 1150,
+  "pythic_phosphorus": 766,
+  "salt": 0,
+  "rate": 500
+}]

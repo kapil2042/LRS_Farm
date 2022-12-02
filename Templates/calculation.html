@@ -1,0 +1,347 @@
+{% include "header.html" %}
+<div id="multi-step-form-container">
+	<!-- Form Steps / Progress Bar -->
+	<ul class="form-stepper form-stepper-horizontal text-center mx-auto pl-0">
+		<!-- Step 1 -->
+		<li class="form-stepper-active text-center form-stepper-list" step="1">
+			<a class="mx-2">
+				<span class="form-stepper-circle">
+					<span>1</span>
+				</span>
+				<div class="label font-bold">INGREDIENTS</div>
+			</a>
+		</li>
+		<!-- Step 2 -->
+		<li class="form-stepper-unfinished text-center form-stepper-list text-black" step="2">
+			<a class="mx-2">
+				<span class="form-stepper-circle text-muted">
+					<span>2</span>
+				</span>
+				<div class="label text-muted font-bold dark:text-white">MANAGE FEEDS</div>
+			</a>
+		</li>
+		<!-- Step 3 -->
+		<li class="form-stepper-unfinished text-center form-stepper-list text-black" step="3">
+			<a class="mx-2">
+				<span class="form-stepper-circle text-muted">
+					<span>3</span>
+				</span>
+				<div class="label text-muted font-bold dark:text-white">CALCULATION</div>
+			</a>
+		</li>
+	</ul>
+	<!-- Step Wise Form Content -->
+	<form id="userAccountSetupForm" name="userAccountSetupForm" enctype="multipart/form-data" method="POST">
+		<!-- Step 1 Content -->
+		<section id="step-1" class="form-step">
+			<h2 class="text-3xl font-semibold text-center">Ingredient's Nutrients Details</h2>
+			<!-- Step 1 input fields -->
+			<div class="mt-3 text-right">
+				<button class="button btn-navigate-form-step bg-cyan-600" type="button" step_number="2">Next</button>
+			</div>
+			<div class="mt-3">
+				<div class="overflow-x-auto relative shadow-md sm:rounded-lg">
+					<table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+						<thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+							<tr>
+								<th scope="col" class="py-3 px-3">
+									INGREDIENTS
+								</th>
+								<th scope="col" class="py-3 px-3">
+									PROTEIN(%)
+								</th>
+								<th scope="col" class="py-3 px-3">
+									ENERGY(Kcal)
+								</th>
+								<th scope="col" class="py-3 px-3">
+									LYSINE(%)
+								</th>
+								<th scope="col" class="py-3 px-3">
+									METHIONINE(%)
+								</th>
+								<th scope="col" class="py-3 px-3">
+									E.EXTRACT(%)
+								</th>
+								<th scope="col" class="py-3 px-3">
+									C.FIBRE(%)
+								</th>
+								<th scope="col" class="py-3 px-3">
+									CALCIUM(%)
+								</th>
+								<th scope="col" class="py-3 px-3">
+									PHOSPHRUS(%)
+								</th>
+								<th scope="col" class="py-3 px-3">
+									A.PHOSPHRUS(%)
+								</th>
+								<th scope="col" class="py-3 px-3">
+									PHYTIC PHOSPHRUS(%)
+								</th>
+								<th scope="col" class="py-3 px-3">
+									SALT(%)
+								</th>
+								<th scope="col" class="py-3 px-3">
+									RATE(Rs/Kg)
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<form action="" id="qtyform">
+								{% for i in ingredient_data %}
+								<tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 
+							dark:hover:bg-gray-600">
+									<th scope="row"
+										class="py-4 px-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+										{{i.name}}
+									</th>
+									<td class="py-4 px-3">
+										{{i.protein}}
+									</td>
+									<td class="py-4 px-3">
+										{{i.energy}}
+									</td>
+									<td class="py-4 px-3">
+										{{i.lysine}}
+									</td>
+									<td class="py-4 px-3">
+										{{i.methionine}}
+									</td>
+									<td class="py-4 px-3">
+										{{i.e_extract}}
+									</td>
+									<td class="py-4 px-3">
+										{{i.c_fiber}}
+									</td>
+									<td class="py-4 px-3">
+										{{i.calcium}}
+									</td>
+									<td class="py-4 px-3">
+										{{i.phosphorus}}
+									</td>
+									<td class="py-4 px-3">
+										{{i.a_phosphorus}}
+									</td>
+									<td class="py-4 px-3">
+										{{i.pythic_phosphorus}}
+									</td>
+									<td class="py-4 px-3">
+										{{i.salt}}
+									</td>
+									<td class="py-4 px-3">
+										{{i.rate}}
+									</td>
+								</tr>
+								{% endfor %}
+							</form>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</section>
+
+
+		<!-- Step 2 Content, default hidden on page load. -->
+		<section id="step-2" class="form-step d-none">
+			<h2 class="text-3xl font-semibold text-center">Feed Formulation's Details</h2>
+			<!-- Step 2 input fields -->
+			<div class="mt-3 text-right">
+				<button class="button btn-navigate-form-step bg-cyan-600" type="button" step_number="1">Prev</button>
+				<button class="button btn-navigate-form-step bg-cyan-600" type="button" step_number="3">Next</button>
+			</div>
+			<div class="mt-3">
+				<div class="overflow-x-auto relative shadow-md sm:rounded-lg">
+					<table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+						<thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+							<tr>
+								<th scope="col" class="py-3 px-3">
+									FEEDS
+								</th>
+								<th scope="col" class="py-3 px-3">
+									REQUIRED PROTEIN(%)
+								</th>
+								<th scope="col" class="py-3 px-3">
+									REQUIRED ENERGY(Kcal)
+								</th>
+								<th scope="col" class="py-3 px-3">
+									REQUIRED LYSINE(%)
+								</th>
+								<th scope="col" class="py-3 px-3">
+									REQUIRED METHIONINE(%)
+								</th>
+								<th scope="col" class="py-3 px-3">
+									REQUIRED E.EXTRACT(%)
+								</th>
+								<th scope="col" class="py-3 px-3">
+									REQUIRED C.FIBER(%)
+								</th>
+								<th scope="col" class="py-3 px-3">
+									REQUIRED CALCIUM(%)
+								</th>
+								<th scope="col" class="py-3 px-3">
+									REQUIRED PHOSPHORUS(%)
+								</th>
+								<th scope="col" class="py-3 px-3">
+									REQUIRED A.PHOSPHORUS(%)
+								</th>
+								<th scope="col" class="py-3 px-3">
+									REQUIRED PHYTIC PHOSPHORUS(%)
+								</th>
+								<th scope="col" class="py-3 px-3">
+									REQUIRED SALT(%)
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							{% for f in feed_data %}
+							<tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 
+							dark:hover:bg-gray-600">
+								<th scope="row"
+									class="py-4 px-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+									{{f.name}}
+								</th>
+								<td class="py-4 px-3">
+									{{f.protein}}
+								</td>
+								<td class="py-4 px-3">
+									{{f.energy}}
+								</td>
+								<td class="py-4 px-3">
+									{{f.lysine}}
+								</td>
+								<td class="py-4 px-3">
+									{{f.methionine}}
+								</td>
+								<td class="py-4 px-3">
+									{{f.e_extract}}
+								</td>
+								<td class="py-4 px-3">
+									{{f.c_fiber}}
+								</td>
+								<td class="py-4 px-3">
+									{{f.calcium}}
+								</td>
+								<td class="py-4 px-3">
+									{{f.phosphorus}}
+								</td>
+								<td class="py-4 px-3">
+									{{f.a_phosphorus}}
+								</td>
+								<td class="py-4 px-3">
+									{{f.pythic_phosphorus}}
+								</td>
+								<td class="py-4 px-3">
+									{{f.salt}}
+								</td>
+							</tr>
+							{% endfor %}
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</section>
+
+
+		<!-- Step 3 Content, default hidden on page load. -->
+		<section id="step-3" class="form-step d-none">
+			<h2 class="text-3xl font-semibold text-center">Let's Start The Cost Optimization Process</h2>
+			<!-- Step 3 input fields -->
+			<div class="mt-3 text-right">
+				<button class="button btn-navigate-form-step bg-cyan-600" type="button" step_number="2">Prev</button>
+			</div>
+			<div class="mt-3">
+				<p class="text-4xl font-bold">There are some instructions for cost optimization</p>
+				<p class="text-lg font-bold mt-3">There are two steps...</p>
+				<ul class="list-disc">
+					<li class="text-lg ml-10 mt-2">
+						First is Min-Max Range of Ingredient's quantity
+					</li>
+				</ul>
+			</div>
+			<form action="{% url 'optimize' %}" method="post">
+				{% csrf_token %}
+				<div class="mt-3">
+					<p class="mb-2 text-2xl font-bold underline underline-offset-4">
+						1. First Enter The Available Quantity Of Ingredients
+					</p>
+					<p class="text-red-500 mb-8">(*if you enable the available quantity it's take by default '0.0'
+						Value also you can modify it)</p>
+
+					<label for="default-toggle"
+						class="md:inline-flex relative items-center cursor-pointer mb-5 md:ml-5">
+						<input type="checkbox" id="default-toggle" name="ed" class="sr-only peer"
+							onclick="enableDisable(this.checked, 'caldis')">
+						<div class="w-11 h-6 bg-gray-200 
+							peer-focus:outline-none peer-focus:ring-4
+							peer-focus:ring-cyan-300 
+							dark:peer-focus:ring-cyan-800 
+							rounded-full peer dark:bg-gray-700 
+							peer-checked:after:translate-x-full 
+							peer-checked:after:border-white 
+							after:content-[''] after:absolute 
+							after:top-[2px] after:left-[2px] 
+							after:bg-white after:border-gray-300 
+							after:border after:rounded-full 
+							after:h-5 after:w-5 after:transition-all 
+							dark:border-gray-600 peer-checked:bg-cyan-600">
+						</div>
+						<span class="md:ml-3 text-sm font-medium text-cyan-500 ">Enable All Inputs For Enter Minimum And
+							Maximum Range of Quantity</span>
+					</label>
+					<div class="mb-5 md:mb-0"></div>
+					<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-6 justify-between items-center">
+						{% for i in ingredient_data %}
+						<label for="{{i.name}}"
+							class="block md:ml-5 md:mb-3 p-3 text-sm font-medium text-gray-900 dark:text-white">
+							{{i.name}} (in Kg)
+						</label>
+						<input type="number" name="min{{i.name}}" id="caldis{{forloop.counter}}" class="bg-gray-50 border border-gray-300 
+							text-gray-900 sm:text-sm rounded-lg focus:ring-cyan-600 
+							focus:border-cyan-600 block w-auto p-2.5 
+							dark:bg-gray-700 dark:border-gray-300 
+							dark:placeholder-gray-400 dark:text-white 
+							dark:focus:ring-cyan-500 dark:focus:border-cyan-500 
+							md:mr-4 mb-4 numbers" placeholder="Min" min="0" disabled>
+						<input type="number" name="max{{i.name}}" id="caldiscaldis{{forloop.counter}}" class="bg-gray-50 border border-gray-300 
+							text-gray-900 sm:text-sm rounded-lg focus:ring-cyan-600 
+							focus:border-cyan-600 block w-auto p-2.5 
+							dark:bg-gray-700 dark:border-gray-300 
+							dark:placeholder-gray-400 dark:text-white 
+							dark:focus:ring-cyan-500 dark:focus:border-cyan-500 
+							md:mr-4 mb-4 numbers" placeholder="Max" min="0" disabled>
+						{% endfor %}
+					</div>
+					<p class="mb-2 mt-10 text-2xl font-bold underline underline-offset-4">
+						2. Now Select The Feed And Other For Cost Optimization
+					</p>
+					<p class="text-red-500 mb-8">(*The cost optimization process will depend on the available quantity
+						and
+						the feed you choose)</p>
+					<div class="flex md:p-10 mt-5 w-full justify-center items-center">
+						<div class="border rounded-xl md:flex md:items-center md:justify-center p-5 md:p-10">
+							<label for="feed"
+								class="block md:mx-5 p-3 text-sm font-medium text-gray-900 dark:text-white">
+								Select Feed For Optimize The Cost:
+							</label>
+							<select name="feed" id="feed" class="bg-gray-50 border border-gray-300 
+													text-gray-900 sm:text-sm rounded-lg 
+													focus:ring-cyan-600 focus:border-cyan-600 
+													block p-2.5 dark:bg-gray-700 
+													dark:border-gray-300 dark:text-white 
+													dark:focus:ring-cyan-500 dark:focus:border-cyan-500 
+													mt-3 md:ml-10 min-w-[200px]">
+								{% for i in feed_data %}
+								<option value="{{i.name}}">{{i.name}}</option>
+								{% endfor %}
+							</select>
+						</div>
+					</div>
+					<div class="text-right">
+						<input type="submit" value="Cost Optimize" class="my-3 p-3 bg-green-600 text-white 
+																		font-bold rounded-lg cursor-pointer">
+					</div>
+				</div>
+			</form>
+		</section>
+	</form>
+</div>
+{% include "footer.html" %}

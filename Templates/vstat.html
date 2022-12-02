@@ -1,0 +1,89 @@
+{% include "header.html" %}
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+
+<div class="md:flex items-center mt-10 justify-center">
+    <form action="#" method="post">
+        {% csrf_token %}
+        <label class="text-sm font-medium 
+                text-gray-900 dark:text-white">Select <b>Year</b> For Graph</label>
+        <select name="plotyaer" id="plotyear"
+            class="md:ml-5 w-52 text-black px-3 py-1 rounded-sm focus:ring-cyan-200 focus:ring-2 text-lg my-3 md:my-0 bg-gray-300">
+            {% for i in y %}
+            {% if i == yy %}
+            <option value="{{i}}" selected>{{i}}</option>
+            {% else %}
+            <option value="{{i}}">{{i}}</option>
+            {% endif %}
+            {% endfor %}
+        </select>
+
+        <label class="ml-0 md:ml-10 text-sm font-medium 
+                text-gray-900 dark:text-white">Select <b>Month</b> For Graph</label>
+        <select name="plotmonth" id="plotmonth"
+            class="md:ml-5 w-52 text-black px-3 py-1 rounded-sm focus:ring-cyan-200 focus:ring-2 text-lg bg-gray-300">
+            {% for i in m %}
+            {% if i == mmm %}
+            <option value="{{i}}" selected>{{i}}</option>
+            {% else %}
+            <option value="{{i}}">{{i}}</option>
+            {% endif %}
+            {% endfor %}
+        </select>
+
+        <input type="submit" value="SHOW" class="mt-5 md:mt-0 md:ml-5 px-5 py-3 text-sm font-bold cursor-pointer 
+        hover:bg-cyan-700 focus:ring-2 focus:ring-cyan-200 bg-cyan-500 rounded-lg">
+    </form>
+</div>
+
+
+<div class="mt-10 font-bold text-2xl">Graph of {{mm}}, {{yy}} (Monthly)</div>
+<!-- plot year -->
+<div id="monthplot" class="mt-5 m-auto" style="max-width: 1080px;"></div>
+
+
+
+<div class="mt-10 font-bold text-2xl">Graph of {{yy}} (Yearly)</div>
+<!-- plot month -->
+<div id="yearplot" class="m-auto mt-5" style="max-width: 1080px;"></div>
+
+
+
+<script>
+    var xArray_y = '{{month}}'.split(",");
+    var yArray_y = '{{user_y}}'.split(",");
+    var xArray_m = '{{day}}'.split(",");
+    var yArray_m = '{{user_m}}'.split(",");
+
+    // Define Data
+    var data_y = [{
+        x: xArray_y,
+        y: yArray_y,
+        mode: "lines"
+    }];
+    var data_m = [{
+        x: xArray_m,
+        y: yArray_m,
+        mode: "lines"
+    }];
+
+    // Define Layout
+    var layout_y = {
+        xaxis: { range: [1, 12], title: "Months" },
+        yaxis: { range: [0, 1000], title: "Number Of Users" },
+        title: "Uses Statistics"
+    };
+    var layout_m = {
+        xaxis: { range: [1, 31], title: "Days" },
+        yaxis: { range: [0, 50], title: "Number Of Users" },
+        title: "Uses Statistics"
+    };
+
+    // Display using Plotly
+    Plotly.newPlot("monthplot", data_m, layout_m);
+    Plotly.newPlot("yearplot", data_y, layout_y);
+</script>
+
+
+
+{% include "footer.html" %}

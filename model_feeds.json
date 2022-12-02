@@ -1,0 +1,154 @@
+[{
+  "_id": {
+    "$oid": "631ad88c657d695a1a316a06"
+  },
+  "id": 1,
+  "name": "BROILER STARTER",
+  "protein": 23,
+  "energy": 3200,
+  "lysine": 1.2,
+  "methionine": 0.5,
+  "e_extract": 4.2,
+  "c_fiber": 4.7,
+  "calcium": 1,
+  "phosphorus": 0.86,
+  "a_phosphorus": 0.45,
+  "pythic_phosphorus": 0.36,
+  "salt": 0.5
+},{
+  "_id": {
+    "$oid": "631ad88c657d695a1a316a07"
+  },
+  "id": 2,
+  "name": "BROILER FINISHER",
+  "protein": 20,
+  "energy": 3200,
+  "lysine": 0.85,
+  "methionine": 0.32,
+  "e_extract": 4.2,
+  "c_fiber": 4.7,
+  "calcium": 0.8,
+  "phosphorus": 0.86,
+  "a_phosphorus": 0.35,
+  "pythic_phosphorus": 0.51,
+  "salt": 0.5
+},{
+  "_id": {
+    "$oid": "631ad88c657d695a1a316a08"
+  },
+  "id": 3,
+  "name": "BSM 10%",
+  "protein": 47,
+  "energy": 3100,
+  "lysine": 4.6,
+  "methionine": 0.6,
+  "e_extract": 15,
+  "c_fiber": 2.5,
+  "calcium": 6.4,
+  "phosphorus": 2.8,
+  "a_phosphorus": 2.8,
+  "pythic_phosphorus": 0,
+  "salt": 5
+},{
+  "_id": {
+    "$oid": "631ad88c657d695a1a316a09"
+  },
+  "id": 4,
+  "name": "BFM 10%",
+  "protein": 45,
+  "energy": 3300,
+  "lysine": 4.4,
+  "methionine": 0.5,
+  "e_extract": 18,
+  "c_fiber": 2,
+  "calcium": 6.2,
+  "phosphorus": 2.6,
+  "a_phosphorus": 2.6,
+  "pythic_phosphorus": 0,
+  "salt": 5
+},{
+  "_id": {
+    "$oid": "631ad88c657d695a1a316a0a"
+  },
+  "id": 5,
+  "name": "chick mash",
+  "protein": 20.5,
+  "energy": 2750,
+  "lysine": 1.04,
+  "methionine": 0.45,
+  "e_extract": 0,
+  "c_fiber": 6,
+  "calcium": 1,
+  "phosphorus": 0,
+  "a_phosphorus": 0.45,
+  "pythic_phosphorus": 0,
+  "salt": 0
+},{
+  "_id": {
+    "$oid": "631ad88c657d695a1a316a0b"
+  },
+  "id": 6,
+  "name": "grower mesh",
+  "protein": 16,
+  "energy": 2500,
+  "lysine": 0.7,
+  "methionine": 0.35,
+  "e_extract": 2,
+  "c_fiber": 9,
+  "calcium": 1,
+  "phosphorus": 0.65,
+  "a_phosphorus": 0.4,
+  "pythic_phosphorus": 0,
+  "salt": 0.5
+},{
+  "_id": {
+    "$oid": "631ad88c657d695a1a316a0c"
+  },
+  "id": 7,
+  "name": "layer 1",
+  "protein": 18,
+  "energy": 2600,
+  "lysine": 0.7,
+  "methionine": 0.35,
+  "e_extract": 2,
+  "c_fiber": 9,
+  "calcium": 3,
+  "phosphorus": 0.65,
+  "a_phosphorus": 0.4,
+  "pythic_phosphorus": 0,
+  "salt": 0.5
+},{
+  "_id": {
+    "$oid": "631ad88c657d695a1a316a0d"
+  },
+  "id": 8,
+  "name": "layer 2",
+  "protein": 16,
+  "energy": 2400,
+  "lysine": 0.65,
+  "methionine": 0.3,
+  "e_extract": 2,
+  "c_fiber": 10,
+  "calcium": 3.5,
+  "phosphorus": 0.65,
+  "a_phosphorus": 0.4,
+  "pythic_phosphorus": 0,
+  "salt": 0.5
+},{
+  "_id": {
+    "$oid": "631ad88c657d695a1a316a0e"
+  },
+  "id": 9,
+  "name": "LGB",
+  "protein": 16,
+  "energy": 2600,
+  "lysine": 0.7,
+  "methionine": 0.4,
+  "e_extract": 2,
+  "c_fiber": 9,
+  "calcium": 1,
+  "phosphorus": 0.6,
+  "a_phosphorus": 0.4,
+  "pythic_phosphorus": 0,
+  "salt": 0.5
+}]
