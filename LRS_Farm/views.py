@@ -1,4 +1,5 @@
 from datetime import datetime, timedelta
+from time import time
 import calendar
 from django.shortcuts import redirect, render
 from model.models import *
@@ -48,7 +49,8 @@ def forgotpass(request):
             encpass = fernet.encrypt(email.encode())
             aau=encpass.decode()
             lrs=key.decode()
-            a='Reset Password link -> 127.0.0.1:8000/chklink?unm='+username+'&lrs='+lrs+'&aau='+aau
+            time1=int(time() * 1000)
+            a='Reset Password link -> 127.0.0.1:8000/chklink?unm='+username+'&lrs='+lrs+'&aau='+aau+'&time='+time1
             send_mail(
                 'Reset Password - LRS_AAU',
                 a,
@@ -69,21 +71,26 @@ def chklink(request):
         unm = request.GET['unm']
         key = request.GET['lrs']
         email = request.GET['aau']
+        timeurl = request.GET['time']
+        timenow=int(time() * 1000)
         fernet = Fernet(key.encode())
         decemail = fernet.decrypt(email.encode()).decode()
-        try:
-            username = get_user_model().objects.get(email=decemail.lower()).username
-            print(username)
-            print(unm)
-            if str(username) == str(unm):
-                context = {
-                    'username' : username,
-                }
-                return render(request,'resetpass.html',context)
-            else:
+        if timeurl in range((timenow-3600000),timenow,1):
+            try:
+                username = get_user_model().objects.get(email=decemail.lower()).username
+                print(username)
+                print(unm)
+                if str(username) == str(unm):
+                    context = {
+                        'username' : username,
+                    }
+                    return render(request,'resetpass.html',context)
+                else:
+                    messages.error(request,'Somthing Was Wrong! Please Retry to reset Your Password')
+            except:
                 messages.error(request,'Somthing Was Wrong! Please Retry to reset Your Password')
-        except:
-            messages.error(request,'Somthing Was Wrong! Please Retry to reset Your Password')
+        else:
+            messages.error(request,'Link is expired!')
     return redirect(home)
 
 #reset password
