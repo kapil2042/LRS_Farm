@@ -52,7 +52,7 @@ def forgotpass(request):
             lrs=key.decode()
             time1=int(time() * 1000)
             IPAddr = socket.gethostbyname(socket.gethostname())
-            a='Reset Password link => '+IPAddr+':8000/chklink?unm='+username+'&lrs='+lrs+'&aau='+aau+'&time='+str(time1)
+            a='Click on the link given below and reset password \n\n Reset Password link => '+IPAddr+':8000/chklink?unm='+username+'&lrs='+lrs+'&aau='+aau+'&time='+str(time1)
             send_mail(
                 'Reset Password - LRS_AAU',
                 a,
