@@ -80,8 +80,6 @@ def chklink(request):
         if int(timeurl) in range((timenow-3600000),timenow,1):
             try:
                 username = get_user_model().objects.get(email=decemail.lower()).username
-                print(username)
-                print(unm)
                 if str(username) == str(unm):
                     context = {
                         'username' : username,
@@ -137,7 +135,6 @@ def editprofile(request):
         }
         if request.method == 'POST':
             username = request.POST.get('unm')
-            print(username)
             first_name = request.POST['fname']
             last_name = request.POST['lname']
             usr = get_user_model().objects.get(username=username)
