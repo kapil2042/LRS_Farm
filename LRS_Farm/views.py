@@ -41,6 +41,7 @@ def logout(request):
 #forgot password
 def forgotpass(request):
     if request.method == 'POST':
+        import socket
         email = request.POST.get('uemail')
         try:
             username = get_user_model().objects.get(email=email.lower()).username
@@ -50,7 +51,8 @@ def forgotpass(request):
             aau=encpass.decode()
             lrs=key.decode()
             time1=int(time() * 1000)
-            a='Reset Password link -> 127.0.0.1:8000/chklink?unm='+username+'&lrs='+lrs+'&aau='+aau+'&time='+str(time1)
+            IPAddr = socket.gethostbyname(socket.gethostname())
+            a='Reset Password link => '+IPAddr+':8000/chklink?unm='+username+'&lrs='+lrs+'&aau='+aau+'&time='+str(time1)
             send_mail(
                 'Reset Password - LRS_AAU',
                 a,
