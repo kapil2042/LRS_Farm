@@ -36,6 +36,7 @@ def login(request):
 #log out
 def logout(request):
     del request.session['admin']
+    messages.success(request,'Loged-out Successfully')
     return redirect(home)
 
 #forgot password
@@ -141,7 +142,7 @@ def editprofile(request):
             usr.first_name = first_name
             usr.last_name = last_name
             usr.save()
-            messages.success(request,"Your Profile Changed Successfully")
+            messages.success(request,"Your Profile edited Successfully")
             return redirect(home)
     return render(request,'editprofile.html',data)
 
@@ -205,6 +206,7 @@ def userdelete(request,username):
             if user is not None:
                 usr = get_user_model().objects.get(username=username)
                 usr.delete()
+                messages.success(request,'User Deleted!')
             else:
                 messages.error(request,"Your Password is Wrong!")
     return redirect(users)
@@ -281,6 +283,7 @@ def i_delete(request,i_name):
     if request.method == 'POST':
         chkname = ingredients.objects.get(name=i_name)
         chkname.delete()
+        messages.error(request,'Ingredient deleted successfully')
     return redirect(manage_ingredients)
 
 #manage feed page
@@ -302,6 +305,7 @@ def f_delete(request,f_name):
     if request.method == 'POST':
         chkname = feeds.objects.get(name=f_name)
         chkname.delete()
+        messages.error(request,'Feed deleted successfully')
     return redirect(manage_feed)
 
 #feed formulation page
@@ -338,8 +342,10 @@ def feed_formulation(request):
         f_salt = request.POST['f_salt']
         add_feed = feeds(id=f_id,name=f_name,protein=f_protein,energy=f_energy,lysine=f_lysine,methionine=f_methionine,e_extract=f_e_extract,c_fiber=f_c_fiber,calcium=f_calcium,phosphorus=f_phosphorus,a_phosphorus=f_a_phosphorus,pythic_phosphorus=f_phy_phosphorus,salt=f_salt)
         add_feed.save()
+        messages.success(request,'Feed added successfully')
         return redirect(manage_feed)
     else:
+        messages.error(request,'Some error occured while feed added')
         return redirect(manage_feed)
 
 #add new ingredients
@@ -377,8 +383,10 @@ def add_ingredient(request):
         i_rate = request.POST['i_rate']
         add_ingredient = ingredients(id=i_id,name=i_name,protein=i_protein,energy=i_energy,lysine=i_lysine,methionine=i_methionine,e_extract=i_e_extract,c_fiber=i_c_fiber,calcium=i_calcium,phosphorus=i_phosphorus,a_phosphorus=i_a_phosphorus,pythic_phosphorus=i_phy_phosphorus,salt=i_salt,rate=i_rate)
         add_ingredient.save()
+        messages.success(request,'Ingredient Added Successfully')
         return redirect(manage_ingredients)
     else:
+        messages.error(request,'Some error occured while ingredient added')
         return redirect(manage_ingredients)
 
 #cost optimize page
@@ -408,12 +416,14 @@ def editfeed(request):
         f_calcium = request.POST['f_calcium']
         f_phosphorus = request.POST['f_phosphorus']
         f_a_phosphorus = request.POST['f_a_phosphorus']
-        f_phy_phosphorus = request.POST['f_phy_phosphorus']
+        f_phy_phosphorus = float(f_phosphorus)-float(f_a_phosphorus)
         f_salt = request.POST['f_salt']
         add_feed = feeds(id=f_id,name=f_name,protein=f_protein,energy=f_energy,lysine=f_lysine,methionine=f_methionine,e_extract=f_e_extract,c_fiber=f_c_fiber,calcium=f_calcium,phosphorus=f_phosphorus,a_phosphorus=f_a_phosphorus,pythic_phosphorus=f_phy_phosphorus,salt=f_salt)
         add_feed.save()
+        messages.success(request,'Feed data edited successfully')
         return redirect(manage_feed)
     else:
+        messages.error(request,'Some error occured while feed edit')
         return redirect(manage_feed)
 
 
@@ -436,8 +446,10 @@ def editingredient(request):
         i_rate = request.POST['i_rate']
         add_ingredient = ingredients(id=i_id,name=i_name,protein=i_protein,energy=i_energy,lysine=i_lysine,methionine=i_methionine,e_extract=i_e_extract,c_fiber=i_c_fiber,calcium=i_calcium,phosphorus=i_phosphorus,a_phosphorus=i_a_phosphorus,pythic_phosphorus=i_phy_phosphorus,salt=i_salt,rate=i_rate)
         add_ingredient.save()
+        messages.success(request,'Ingredient data edited successfully')
         return redirect(manage_ingredients)
     else:
+        messages.error(request,'Some error occured while ingredient edit')
         return redirect(manage_ingredients)
 
 
@@ -552,6 +564,7 @@ def optimize(request):
             'feed_name' : feed_name,
             'total' : total,
         }
+        messages.success(request,'Cost optimize process is done!')
         return render(request,'optimize.html',pri_qty)
     else:
         messages.error(request,'The cost optimization process is not able to optimize the costs because you have not entered the correct quantities of ingredients')
