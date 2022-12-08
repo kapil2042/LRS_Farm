@@ -11,7 +11,7 @@ from django.http import HttpResponse
 import numpy as np
 from cryptography.fernet import Fernet
 from django.conf import settings
-from django.core.mail import send_mail
+from django.core.mail import EmailMultiAlternatives
 
 
 #login
@@ -53,14 +53,11 @@ def forgotpass(request):
             lrs=key.decode()
             time1=int(time() * 1000)
             IPAddr = socket.gethostbyname(socket.gethostname())
-            a='Click on the link given below and reset password \n\n Reset Password link => '+IPAddr+':8000/chklink?unm='+username+'&lrs='+lrs+'&aau='+aau+'&time='+str(time1)
-            send_mail(
-                'Reset Password - LRS_AAU',
-                a,
-                settings.EMAIL_HOST_USER,
-                [email],
-                fail_silently=False,
-            )
+            a='Welcome to Live Stock Research Station, AAU, Anand Click on the link given below and reset password (*Link is expired within 1 hour) Reset Password link => '+IPAddr+':8000/chklink?unm='+username+'&lrs='+lrs+'&aau='+aau+'&time='+str(time1)+'Thank You For Using Our Website, LRS, AAU, Anand'
+            html_a='<p><p style="color:#006666;text-align:center;font-size:42px;font-weight:900;">Welcome to Live Stock Research Station, AAU, Anand</p><p style="font-size:24px;font-weight:bold;">Click on the link given below and reset password</p><p style="color:red;font-weight:bold;font-size:16px;">(*Link is expired within 1 hour)</p><b style="color:#004d4d">Reset Password link =></b> '+IPAddr+':8000/chklink?unm='+username+'&lrs='+lrs+'&aau='+aau+'&exp='+str(time1)+'<br><br><h2 style="color:green;">Thank You For Using Our Website,</h2><h3 style="color:green;">LRS, AAU, Anand</h3></p>'
+            msg = EmailMultiAlternatives('Reset Password - LRS_AAU', a, settings.EMAIL_HOST_USER, [email])
+            msg.attach_alternative(html_a, "text/html")
+            msg.send()
             messages.success(request,'Please check your Email for reset password!')
         except:
             messages.error(request,'Entered Email-id is not registered with the website')
@@ -74,7 +71,7 @@ def chklink(request):
         unm = request.GET['unm']
         key = request.GET['lrs']
         email = request.GET['aau']
-        timeurl = request.GET['time']
+        timeurl = request.GET['exp']
         timenow=int(time() * 1000)
         fernet = Fernet(key.encode())
         decemail = fernet.decrypt(email.encode()).decode()
