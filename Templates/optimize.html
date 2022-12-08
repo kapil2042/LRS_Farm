@@ -6,15 +6,64 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="{% static 'css/Styles.css' %}">
     <link rel="icon" type="image/x-icon" href="{% static 'images/logo.ico' %}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>LRS_AAU</title>
+    {% if messages %}
+    {% for i in messages %}
+    <script>
+        $(document).ready(function () {
+            toastr.options = {
+                'closeButton': false,
+                'debug': false,
+                'newestOnTop': false,
+                'progressBar': false,
+                'positionClass': 'toast-bottom-right',
+                'preventDuplicates': false,
+                'showDuration': '1000',
+                'hideDuration': '1000',
+                'timeOut': '3000',
+                'extendedTimeOut': '1000',
+                'showEasing': 'swing',
+                'hideEasing': 'linear',
+                'showMethod': 'fadeIn',
+                'hideMethod': 'fadeOut',
+            }
+        });
+        function successtoast() {
+            toastr.options.closeButton = true,
+            toastr.options.progressBar = true,
+            toastr.options.positionClass = 'toast-bottom-right',
+            toastr.success('{{i}}');
+        }
+        function errortoast() {
+            toastr.options.closeButton = true,
+            toastr.options.progressBar = true,
+            toastr.options.positionClass = 'toast-bottom-right',
+            toastr.error('{{i}}');
+        }
+    </script>
+    {% endfor %}
+    {% endif %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Toastr -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
 </head>
-
+{% if messages %}
+{% for i in messages %}
+{% if i.tags == 'success' %}
+<body onload="successtoast()" class="bg-gray-100 dark:bg-gray-800 text-black dark:text-white w-full">
+{% elif i.tags == 'error' %}
+<body onload="errortoast()" class="bg-gray-100 dark:bg-gray-800 text-black dark:text-white w-full">
+{% else %}
 <body class="bg-gray-100 dark:bg-gray-800 text-black dark:text-white w-full">
-    <div id="preloderopti">
+{% endif %}
+{% endfor %}
+{% endif %}
+  <div id="preloderopti">
 
     </div> 
     <script>
@@ -71,6 +120,7 @@
             </div>
         </div>
     </div>
+    <script src="{% static 'js/tailwind.js' %}"></script>
 </body>
 
 </html>
