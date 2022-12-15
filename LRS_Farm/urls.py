@@ -20,6 +20,7 @@ from LRS_Farm import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.home,name='home'),
+    path('session/',views.session,name='session'),
     path('login/',views.login,name='login'),
     path('logout/',views.logout,name='logout'),
     path('forgotpass/',views.forgotpass,name='forgotpass'),

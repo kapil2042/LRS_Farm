@@ -122,7 +122,15 @@ def home(request):
         'admin' : admin,
         'userdetails' : userdetails,
     }
+    # if request.method == 'GET':
+    #     if request.GET['msg'] == 'lrs':
+    #         messages.error(request,'Last session was destroyed please login again to continue')
     return render(request,'Home.html',data)
+
+#session
+def session(request):
+    messages.error(request,'Last session was destroyed please login again to continue')
+    return redirect(home)
 
 #edit profile
 def editprofile(request):
