@@ -48,6 +48,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.contrib.sessions.middleware.SessionMiddleware',
+    'django_session_timeout.middleware.SessionTimeoutMiddleware',
 ]
 
 ROOT_URLCONF = 'LRS_Farm.urls'
@@ -147,3 +149,10 @@ EMAIL_USE_TLS = True
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'lrs.aau.in@gmail.com'
 EMAIL_HOST_PASSWORD = 'nlugxyghjtuxmmqj'
+
+
+#session
+SESSION_EXPIRE_SECONDS = 1200
+SESSION_EXPIRE_AFTER_LAST_ACTIVITY = True
+SESSION_EXPIRE_AFTER_LAST_ACTIVITY_GRACE_PERIOD = 20
+SESSION_TIMEOUT_REDIRECT = '/'
