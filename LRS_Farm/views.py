@@ -653,6 +653,7 @@ def export_xls(request):
 
     columns = ['INGREDIENTS', 'QTY', 'RATE', 'VALUE', '', '', 'FINAL ANALYSIS']
     columns.append(feed_name)
+    columns.append('REQUIRED')
 
     for col_num in range(len(columns)):
         if columns[col_num] == '':
@@ -678,6 +679,7 @@ def export_xls(request):
 
     row_num = 2
     rows = ingredients.objects.all().values_list('name', 'protein', 'rate', 'energy')
+
     for row in rows:
         row_num += 1
         for col_num in range(len(row)):
@@ -707,6 +709,13 @@ def export_xls(request):
     row_num = 3
     for i in range(len(final_total)):
         ws.write(row_num, 7, round(final_total[i]/100,2), font_style)
+        row_num+=2
+    
+    requred = list(feeds.objects.values_list('protein', 'energy', 'lysine', 'methionine', 'e_extract', 'c_fiber', 'calcium', 'phosphorus', 'a_phosphorus', 'pythic_phosphorus', 'salt').filter(name=feed_name))
+    required= list(requred[0])
+    row_num = 3
+    for i in range(len(required)):
+        ws.write(row_num, 8, required[i], font_style)
         row_num+=2
 
 
