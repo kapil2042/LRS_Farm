@@ -79,7 +79,7 @@ WSGI_APPLICATION = 'LRS_Farm.wsgi.application'
 DATABASES = {
    'default': {
        'ENGINE': 'djongo',
-       'NAME': 'LRS_Farm',
+       'NAME': 'LRS_Farm_Original',
        'ENFORCE_SCHEMA': False,
             'CLIENT': {
                 'host': 'mongodb+srv://kapil2042:kapil2042@cluster0.kddbe.mongodb.net/?retryWrites=true&w=majority'
